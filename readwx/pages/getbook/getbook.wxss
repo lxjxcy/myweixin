@@ -1,0 +1,99 @@
+/* pages/getbook/getbook.wxss */
+@import "../../style.wxss";
+.l{
+  float: left;
+}
+.r{
+   float: right;
+}
+.booktitle{
+  height:265rpx;
+  padding:20rpx;
+  padding-bottom: 40rpx;
+}
+.pic{
+  width:33%;
+  float: left;
+  height:100%;
+  margin-right:6%;
+border: 1px solid #ccc;
+}
+.act{
+ width:60%;
+  float: left;
+   height:100%;
+   
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 16px;
+  position: relative;
+}
+.enjoy{
+  position: absolute;
+  top:10rpx;
+  right:10rpx;
+}
+
+.shared{
+  background:#fff;
+  border:none;
+}
+.tilted{
+   font-size: 20px;
+   font-weight: 400
+}
+.nemu{
+  height:120rpx;
+  border-top:1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20rpx;
+   line-height: 120rpx; 
+}
+
+.startread{
+   height:100rpx;
+  border-top:1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 100rpx;
+  text-align: center;
+  	position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+    background: #0cdca5;
+    color:#fff;
+}
+.information{
+  padding:40rpx 20rpx;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+/*目录  */
+.maskLayer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background: #000;
+  opacity: 0.2; */
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
+  z-index: 60000;
+  color: #fff;
+}
+
+.choose {
+  width: 100%;
+   top:30%;
+   height:70%;
+  /* overflow: hidden; */
+  position: fixed;
+  left: 0;
+  z-index: 400000;
+  background: #fff;
+  padding-top: 20rpx;
+  overflow: auto;
+}

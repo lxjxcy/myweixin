@@ -1,0 +1,53 @@
+/* pages/find/find.wxss */
+@import "../../style.wxss";
+.userinfo{
+  height:280rpx;
+  line-height: 280rpx;
+  padding:0 40rpx;
+  margin:40rpx 0;
+  border-bottom: 2rpx solid #ccc;
+  background: #fff;
+  text-align: center;
+    position: relative
+}
+.telphone{
+  position: absolute;
+  bottom: -60rpx;
+  left:42%;
+
+}
+
+.list_3{
+  border-top:40rpx solid #edece8
+}
+.userinfo image{
+  height:150rpx;
+  width:150rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.list{
+  height:100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+   background: #fff;
+  border-bottom: 2rpx solid #ccc;
+}
+.t2{
+  float: right;
+  font-size: 40rpx;
+}
+
+
+.goback{
+  margin-top:50rpx;
+  text-align: center
+}
+.goback text{
+  text-decoration: outline;
+  color:#0ff
+}
+.ma{
+  padding-right:10rpx;
+}

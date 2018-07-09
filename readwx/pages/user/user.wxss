@@ -1,0 +1,9 @@
+/* pages/user/user.wxss */
+
+.zan-panel {
+  padding: 10px;
+}
+.zan-switch {
+   margin-right: 8px; 
+   float: right;
+}

@@ -1,0 +1,27 @@
+<!--pages/books/book1/book1.wxml-->
+<view class="readbook1" name="readBookone">
+     <swiper  class="swiper-box" indicator-dots="true" autoplay="true">
+        <swiper-item class="slide-image"><image src='../../../image/slider1.jpg' class='pic'></image></swiper-item> 
+          <swiper-item class="slide-image"><image src='../../../image/slider2.jpg' class='pic'></image></swiper-item>
+          <swiper-item class="slide-image"><image src='../../../image/slider3.jpg' class='pic'></image></swiper-item>
+    </swiper>
+    <!--书籍  -->
+    <view class='list-book-top'>
+        <view class='booktitle'>火热推荐</view>
+        <view class='list-hot'>
+            <view class='list' wx:for="{{listimg}}" wx:for-item="nowItem" wx:for-index="index" wx:key="{{index}}" bindtap="handleTap" data-index="{{nowItem.title}}">
+              <!-- <image class='listimg' src='https://pic.maizuo.com/usr/movie/20d5856282de23076b4349fb8c42e2b5.jpg?x-oss-process=image/resize,m_fixed,h_0,w_300'></image>
+              <text>22222222</text> -->
+               <image class='listimg' src='{{nowItem.pic}}'></image>
+              <text>{{nowItem.title}}</text>
+            </view>
+           
+
+        </view>
+
+    
+    </view>  
+</view>
+
+
+  

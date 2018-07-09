@@ -1,0 +1,37 @@
+<!--pages/getbook/getbook.wxml-->
+
+<view class="getbook">
+  <view class="booktitle">
+      <view class='pic'></view>
+      <view class='act'>
+          <view class='tilted'>{{title}}</view>
+          <view>人鱼二代</view>
+          <view>234万字</view>
+          <view>3422人在读</view>
+          <view class="enjoy" > 
+            <button open-type='share' class='shared'><text class='iconfont icon-fenxiang1'></text></button>
+          </view>
+      </view>    
+  </view>
+
+  <view class='nemu' bindtap="menu">
+    <view class='l'>目录（共45章）</view>
+    <view class='r'> > </view>
+  </view>
+
+   <!-- 目录 --> 
+      <view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal' catchtouchmove="true"></view> 
+    <view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+      <block wx:for="{{getlist}}" wx:for-item="parentItem" wx:for-index="myindex" wx:key="{{myindex}}">
+        <view data-index="{{parentItem}}" bindtap='getzhang'>{{parentItem}}</view>
+      </block>
+     </view> 
+
+  <view class='information'>
+  <text selectable="true">年龄不过十四左右，虽然并算不上绝色，不过那张稚气未脱的小脸，却是蕴含着淡淡的妩媚，清纯与妩媚，矛盾的集合，让得她成功的成为了全场瞩目的焦点</text> 
+  </view>
+  
+  <!-- <view bindtap='ceshi'>翻页测试</view>  -->
+</view>
+  <view class="startread" bindtap='bindViewTap' data-index="{{title}}">开始阅读</view> 
+

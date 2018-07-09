@@ -1,0 +1,23 @@
+
+<!-- 文本 -->
+<view class="containerss" style="background:{{bodyColor}}">
+  <!-- 中间层，点击，头部底部显示 -->
+  <view class="moved" bindtap="midaction"  bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="background:{{bodyColor}}">
+  <!-- 主体内容 -->
+    <scroll-view  scroll-top="{{scroll_top}}" class="readbook" style="font-size:{{initFontSize}}px;" bindscroll="scrollContain" bindscrolltolower="bindscrolltolower" >
+      {{Text}}
+    </scroll-view>
+  </view>
+
+</view>
+<!--翻页  -->
+<view class='page-change'>
+    <view class="tb {{borderred=='tb' ? 'borderred':''}}" bindtap='topB'>上下翻页</view>
+    <view class="lr {{borderred=='lr' ? 'borderred':''}}" bindtap='leftR'>左右翻页</view>
+</view>
+
+<!-- 底部 -->
+
+  
+  
+

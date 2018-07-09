@@ -1,0 +1,38 @@
+<!--pages/find/find.wxml-->
+<view class='boxs'>
+  
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>          
+                <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover">
+                     <text class='telphone'>{{userInfo.nickName}}</text>
+                </image>            
+        </block>
+    </view>
+    <view class='list'>
+        <text><text class='iconfont icon-lishiyueduxiangzuo ma'></text>阅读历史</text>
+         <text class='t2'> > </text>
+       
+    </view>
+    <view class='list'>
+         <text><text class='iconfont icon-wodebijix ma'></text>我的笔记</text>
+          <text class='t2'>></text>
+         
+    </view> 
+    <view class='list list_3'>
+        <text class='iconfont icon-shouji2 ma'></text> <text>绑定手机</text>
+        <text class='t2'>></text>
+    </view> 
+    <view class='list'>
+        <text><text class='iconfont icon-wodebiji ma'></text>个人资料</text>
+         <text class='t2'>></text>
+    </view>
+     <view class='list'>
+          <text> <text class='iconfont icon-xiugaimima2 ma'></text>修改密码</text>
+         <text class='t2'>></text>
+    </view>
+
+    <view class='goback'><text>退出登录</text>
+        </view> 
+</view> 
+  

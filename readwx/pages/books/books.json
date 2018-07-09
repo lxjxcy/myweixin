@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "书城",
+   "component": true,
+  "usingComponents": {
+    "read-bookone": "book1/book1",
+    "read-booktwo": "book2/book2"
+  }
+}
+  

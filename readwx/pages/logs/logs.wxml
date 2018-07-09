@@ -1,0 +1,85 @@
+<!--logs.wxml-->
+<view class="containerss">
+   <!-- 目录 --> 
+      <view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal' catchtouchmove="true"></view> 
+    <view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+      <block wx:for="{{getlist}}" wx:for-item="parentItem" wx:for-index="myindex" wx:key="{{myindex}}">
+        <view data-index="{{parentItem}}"  bindtap='getzhang'>{{parentItem}}</view>
+      </block> 
+    
+     </view> 
+
+<!-- 中间层，点击，顶部底部显示 -->
+  <view class="moved" bindtap="midaction"  bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+  <!-- 文章内容 -->
+  <scroll-view  scroll-top="{{scroll_top}}" class="readbook"  style="background:{{bodyColor}};font-size:{{initFontSize}}px;line-height:{{lineHeight}}em"  bindscroll="scrollContain" bindscrolltolower="bindscrolltolower">
+    <view><text>{{zhangjie}}</text></view>
+    {{Text}}
+    </scroll-view>
+  </view>
+
+</view>
+
+<!-- 设置 -->
+  <view class="top-nav-pannel font-container" wx:if="{{ziti}}" animation='{{animationDatas}}'>
+    <view class="child-mod">
+      <view class="span">字号</view>
+      <text class="spe-button" bindtap="bindBig">A+</text>
+      <text class='mid18'>18</text>
+      <text class="spe-button" style="margin-left:10px;" bindtap="bindSmall">A-</text>
+    </view>
+     <view class="child-mod">
+        <view class="span">行距</view>
+        <text class="spe-set {{lineHeight=='1.5' ? 'border-line':''}}" bindtap="lineH15" >1.5</text>
+        <text class="spe-set margi {{lineHeight=='2' ? 'border-line':''}}" bindtap="lineH2">2</text>
+        <text class="spe-set {{lineHeight=='2.5' ? 'border-line':''}}" bindtap="lineH25">2.5</text>
+    </view>
+    <view class="child-mod">
+      <view class="span">背景</view>
+      <block wx:for="{{colorArr}}" wx:for-item="color" wx:key="this">
+        <view class="bk-container {{_num==index?'bk-container-current':''}}" data-num="{{index}}" style="background-color:{{color.value}}" bindtap="bgChange"></view>
+      </block>
+    </view>
+    <view class="child-mod">
+        <view class="span">翻页</view>
+        <text class="spe-page lr {{borderred=='lr' ? 'borderred':''}}" bindtap='leftR'> 左右翻页</text>
+        <text class="spe-page tb {{borderred=='tb' ? 'borderred':''}}" style="margin-left:40px;" bindtap='topB'>上下翻页</text>
+    </view>
+  </view>
+  <!--顶部 -->
+  <!--style="display:{{topnav}}"   -->
+  <view class='top-nav top_nav' wx:if="{{topnav}}" animation='{{animationDatat}}'>
+    <view class='menu_list' bindtap="showlist">...</view>
+  </view>
+  <!--分享菜单  -->
+    <view class='sharemenu' wx:if="{{menulist}}">
+      <view class='top-mod'>添加书签</view>
+      <view class='top-mod'>书籍详情</view>
+      <view class='top-mod'><text class='iconfont icon-fenxiang1'></text>分享</view>
+    </view>
+  <!-- 底部 -->
+  <view class="bottom-nav bottom_nav" wx:if="{{nav}}" animation='{{animationDatab}}'>
+    <view class="item menu-button" bindtap="menu">
+      <view class="item-warp">
+        <view class="icon-menu"><text class='iconfont icon-android-menu'></text></view>
+        <view class="icon-text">目录</view>
+      </view>
+    </view>
+    
+    <view class="item" bindtap="dayNight">
+      <view class="item-warp" wx:if="{{daynight}}">
+        <view class="icon-day"><text class='iconfont icon-baitian'></text></view>
+        <view class="icon-text">白天</view>
+      </view>
+      <view class="item-warp" wx:else>
+        <view class="icon-night"><text class='iconfont icon-yejian'></text></view>
+        <view class="icon-text">夜间</view>
+      </view>
+    </view>
+    <view class="item current" bindtap="zitiaction" >
+      <view class="item-warp">
+        <view class="icon-ft"></view>
+        <view class="icon-text">设置</view>
+      </view>
+    </view>
+  </view>

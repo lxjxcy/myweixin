@@ -1,0 +1,47 @@
+/* pages/search/search.wxss */
+
+.search{
+  padding:10rpx;
+}
+.search-top{
+  height:100rpx;
+  line-height: 100rpx;
+}
+.search-box{
+  width:80%;
+  height:60rpx;
+  background: #f8f8f8;
+  border:1rpx solid #ccc;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  float: left; 
+  border-radius: 10px;
+  margin-left:20rpx;
+}
+.start-search{
+ font-size: 34rpx;
+  float: left; 
+  position: relative;
+  top:-15rpx;
+  margin-left:20rpx;
+
+}
+
+
+/*热门搜索 */
+.title-list{
+  display: flex;
+  justify-content: space-around;
+  padding:20rpx 130rpx;
+  flex-direction: row;
+  flex-wrap:wrap;
+  overflow: hidden;
+
+}
+
+.list-book{
+  margin:10rpx;
+  padding:5rpx 10rpx;
+  border:1rpx solid #ccc;
+  font-size: 28rpx;
+}

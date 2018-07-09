@@ -1,0 +1,8 @@
+<!--pages/books/book2/book2.wxml-->
+<view class="wrapper" name="readBook">
+    <slot name="before"></slot>
+      <view>{{innerText}}</view>
+      <view>{{list}}</view>
+      <slot></slot>
+      <slot name="after"></slot>
+</view>

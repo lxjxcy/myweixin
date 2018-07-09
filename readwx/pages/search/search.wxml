@@ -1,0 +1,22 @@
+<!-- pages/search/search.wxml--> 
+<view class='search'>
+    <view class='search-top'>
+    <input class="search-box" bindinput="bindKeyInput" placeholder="搜索书名，作者，出版社"/>
+    <text class='start-search'>搜索</text>
+    </view>
+</view> 
+<!-- <view class="section__title">你输入的是：{{inputValue}}</view> -->
+
+<view class='hot-search'>
+    <view class='hot-title'>热门搜索：</view>
+    <view class='title-list'>
+      <view class='list-book' wx:for="{{hotList}}" wx:for-item="nowItem" wx:for-index="index" wx:key="{{index}}" bindtap="handleTap" data-index="{{nowItem}}">{{nowItem}}</view>
+
+    </view>
+
+</view>
+<view class='hot-search'>
+    <view class='hot-title'>历史搜索：</view>
+</view>
+
+

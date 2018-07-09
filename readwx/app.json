@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/books/books",
+    "pages/getbook/getbook",
+    "pages/user/user",
+    "pages/find/find",
+    "pages/logs/logs",
+    "pages/pagetion/pagetion",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "阅读",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/books/books",
+        "text": "书城",
+        "iconPath": "image/inbooks.png",
+        "selectedIconPath": "image/books.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "image/infind.png",
+        "selectedIconPath": "image/find.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "我的",
+        "iconPath": "image/inuser.png",
+        "selectedIconPath": "image/user.png"
+      }
+    ]
+  }
+}
